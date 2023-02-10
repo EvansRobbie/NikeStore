@@ -1,9 +1,10 @@
 import React from 'react'
 import { StarIcon , ShoppingBagIcon } from '@heroicons/react/24/solid'
-
+import {useGlobalContext} from '../context/GlobalContext'
 const Item = ({ifExist,item}) => {
     const { title, text, rating, price, img, btn, color, shadow} = item
-  return (
+   const { addToCart} = useGlobalContext()
+    return (
     <div className={` ${ ifExist ? 'grid-cols-2 sm:grid-cols-1 h-[20vh] lg:h-[25vh]  justify-between  py-2 px-5 md:py-4 ' : 'grid justify-items-center py-4'} grid items-center  w-full h-full rounded-xl bg-gradient-to-b ${color} ${shadow} hover:scale-105 transitions-theme relative`}>
         <div className={`${ifExist ? 'items-start ' : 'items-center'} flex flex-col justify-center w-full h-full `}>
 
@@ -19,7 +20,7 @@ const Item = ({ifExist,item}) => {
                 </div>
             </div>
             <div className='flex items-center justify-between w-28'>
-                <div className='flex items-center justify-center bg-white/80 rounded blur-effect-theme h-6 w-6'>
+                <div onClick={()=>addToCart(item)} className='flex items-center justify-center bg-white/80 rounded blur-effect-theme h-6 w-6'>
                     <ShoppingBagIcon className='icon-style h-5 w-5  text-slate-900'/>
                 </div>
                 <div className=' bg-white/80 blur-effect-theme rounded px-2 py-0.5'>
