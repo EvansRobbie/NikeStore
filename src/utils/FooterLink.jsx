@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FooterLink = ({item}) => {
- console.log(item)
+//  console.log(item)
  const linkElement = item.map((item, index)=>{
     const {link} = item
     return(

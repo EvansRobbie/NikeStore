@@ -1,10 +1,11 @@
 import './App.css';
-import {Navbar, Hero, Sales, Description, Stories, Footer} from './components'
+import {Navbar, Hero, Sales, Description, Stories, Footer, Cart} from './components'
 import {heroapi, popularsales, topratesales, highlight, sneaker, story, footerAPI} from './data/data'
 function App() {
   return (
     <>
     <Navbar/>
+    <Cart/>
     <div className='flex flex-col gap-16 md:gap-20 relative'>
      <Hero heroapi = {heroapi} />
      <Sales endpoint= {popularsales} ifExist />

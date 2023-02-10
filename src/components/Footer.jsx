@@ -19,13 +19,13 @@ const Footer = ({footerAPI: {titles, links}}) => {
                     <FooterLink key={index} item= {item} index = {index}/>
                 ))}
             </div>
-            <div className='flex text-slate-200 items-center justify-center '>
-            <h1 className=''>&copy; Copyright</h1>
-            <p className='px-2'>All Rights Reserved</p>
-            <p className='font-bold text-lg'>Robbievans {today.getFullYear()}</p>
+          
         </div>
+        <div className=' text-slate-200 text-center  '>
+            <span className=' '>&copy; Copyright</span>
+            <span className='px-2'>All Rights Reserved</span>
+            <span className='font-bold text-lg'>Robbievans {today.getFullYear()}</span>
         </div>
-       
     </footer>
   )
 }

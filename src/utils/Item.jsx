@@ -4,7 +4,7 @@ import { StarIcon , ShoppingBagIcon } from '@heroicons/react/24/solid'
 const Item = ({ifExist,item}) => {
     const { title, text, rating, price, img, btn, color, shadow} = item
   return (
-    <div className={` ${ ifExist ? 'grid-cols-2 sm:grid-cols-1  justify-between  py-2 px-5 md:py-4 ' : 'grid justify-items-center py-4'} grid items-center  w-full h-full rounded-xl bg-gradient-to-b ${color} ${shadow} hover:scale-105 transitions-theme relative`}>
+    <div className={` ${ ifExist ? 'grid-cols-2 sm:grid-cols-1 h-[20vh] lg:h-[25vh]  justify-between  py-2 px-5 md:py-4 ' : 'grid justify-items-center py-4'} grid items-center  w-full h-full rounded-xl bg-gradient-to-b ${color} ${shadow} hover:scale-105 transitions-theme relative`}>
         <div className={`${ifExist ? 'items-start ' : 'items-center'} flex flex-col justify-center w-full h-full `}>
 
             <h1 className=' text-slate-200 font-medium  filter drop-shadow-sm md:text-lg'>{title}</h1>
@@ -29,8 +29,8 @@ const Item = ({ifExist,item}) => {
             </div>
             
         </div>
-        <div className={`${ifExist ? 'w-[220px] lg:w-[250px] lg:h-[18vh]  mx-4 absolute top-0 right-0' : 'w-[250px] lg:w-[220px] '} h-full`}>
-                <img className={`${ifExist ? '-rotate-[30deg] lg:-rotate-[35deg] py-1 hover:-rotate-[10deg] object-fill lg:object-cover ' : 'hover:-rotate-[15deg] object-fill' } w-full h-full   transitions-theme duration-700`} src={img} alt={title} />
+        <div className={`${ifExist ? 'w-[220px] flex items-center justify-end my-4 h-[15vh] lg:w-[250px] lg:h-[18vh]  absolute top-0 right-0' : 'w-[250px] lg:w-[220px] '} h-full`}>
+                <img className={`${ifExist ? '-rotate-[30deg] lg:-rotate-[35deg] py-1 hover:-rotate-[10deg] object-fill  ' : 'hover:-rotate-[15deg] object-fill' } w-auto h-full   transitions-theme duration-700`} src={img} alt={title} />
             </div>
     </div>
   )
