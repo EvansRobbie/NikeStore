@@ -13,11 +13,11 @@ const Stories = ({story:{title, news}}) => {
     }
     // console.log(news)
   return (
-    <div className='relative nike-container w-auto h-auto group'>
-        <div>
+    <div className='relative max-w-[1200px] w-full px-10 h-auto group flex flex-col items-center'>
+        <div className='flex items-start justify-start w-full'>
             <h1 className='text-3xl font-bold text-slate-900 filter drop-shadow'>{title}</h1>
         </div>
-        <div className='flex overflow-x-scroll scroll-hidden py-8 max-w-[350px] sm:max-w-[600px] md:max-w-[750px] lg:max-w-[960px] xl:max-w-[1260px] h-full gap-4  scroll-smooth transitions-theme duration-700' id={'slider'}>
+        <div className='flex overflow-x-scroll   scroll-hidden py-8 max-w-[350px] sm:max-w-[600px] md:max-w-[750px] lg:max-w-[960px] xl:max-w-[1260px] h-full gap-4  scroll-smooth transitions-theme duration-700' id={'slider'}>
             {news.map((item, index)=>(
                 <StoryItem key = {index} item = {item}/>
             ))}

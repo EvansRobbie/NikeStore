@@ -3,7 +3,7 @@ import Logo from '../assets/logo.png'
 import { HeartIcon, MagnifyingGlassIcon, ShoppingBagIcon } from '@heroicons/react/24/outline' 
 import { useGlobalContext } from '../context/GlobalContext'
 const Navbar = () => {
-  const {handleSidebar} = useGlobalContext()
+  const {handleSidebar,itemQuantity} = useGlobalContext()
   const [nav, setNav] = useState(false)
    const navScroll = () =>{
     window.scrollY > 30 ? setNav(true) : setNav(false)
@@ -34,7 +34,7 @@ useEffect (() =>{
             {/* shopping bag */}
             <ShoppingBagIcon className={`icon-style h-6 w-6 sm:h-7 sm:w-7  font-bold filter drop-shadow duration-700 transitions-theme ${ nav ? 'text-slate-900 ': 'text-slate-200'}`}/>
             <div className={`${nav ? 'bg-slate-900' : 'bg-slate-200'} absolute top-9  rounded-full h-5 w-5 right-5 sm:right-6 md:right-8 lg:right-11 xl:right-14 flex items-center justify-center blur-effect-theme group-hover:scale-50 active:scale-100 cursor-pointer transition-all duration-300`}>
-              <span className={`${nav ? 'text-slate-200' : 'text-slate-900'} text-xs  font-semibold`} >0</span>
+              <span className={`${nav ? 'text-slate-200' : 'text-slate-900'} text-xs  font-semibold`} >{itemQuantity}</span>
             </div>
           </li>
         </ul>

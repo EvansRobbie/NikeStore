@@ -34,7 +34,7 @@ const CartItem = () => {
             </div>
         <div className='flex flex-col items-center h-20 justify-between'>
             <h1 className='text-slate-900 font-medium text-base md:text-lg'>${price * qty}</h1>
-            <div onClick={()=>removeFromCart(id)} className='bg-slate-900 rounded flex items-center justify-center h-6 w-6 md:h-7 md:w-7'>
+            <div onClick={()=>removeFromCart(id, title)} className='bg-slate-900 rounded flex items-center justify-center h-6 w-6 md:h-7 md:w-7'>
                 <TrashIcon className='icon-style text-slate-200 h-5 w-5 md:h-6 md:w-6'/>
             </div>
         </div>

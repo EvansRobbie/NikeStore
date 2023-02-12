@@ -17,7 +17,7 @@ const StoryItem = ({item}) => {
     }
     return (
     <div className='flex flex-col border rounded-xl '>
-        <div className={`w-[300px] h-[30vh] rounded-t-xl overflow-hidden`}>
+        <div className={`w-[17rem] h-[25vh] sm:h-[30vh] rounded-t-xl overflow-hidden`}>
             <img className='h-full w-full object-fill ' src={img} alt={title} />
         </div>
         <div className='flex items-center justify-between mx-4 py-4'>
